@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSIS 133 PHP Scripting Project</title>
+	<meta charset="utf-8">
+	<link href='https://fonts.googleapis.com/css?family=Lobster|Raleway|Courgette' rel='stylesheet' type='text/css'>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+	   body { background-color: #999900; }
+	   a:link, a:visited { color:#888800 }
+	 h1 { 
+	    text-align:center;
+	    font-family: Courgette; }
+	 #main {
+	      width: 60%;
+	      margin: 44px auto;
+	      padding: 13px 33px 44px;
+	      min-height: 400px;
+	      background-color: #ffffff;
+	      font-family: Raleway;
+	      color: #666600;
+	      border-radius: 33px;
+	      border: #333333 1px solid; }
+	  #contact {
+	      margin-top:10px; 
+	      border-radius:13px; 
+	      border:#333333 1px solid; 
+	      padding:13px 33px; 
+	      background-color: #f3f1d9 }
+	  table { width: 100%; }
+	  input, textarea { width: 100%; }
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>Contact</h1>
+		<div id="contact">
+			<form action='contact.php' method="post">
+				<p style="padding:20px; font-style:italic; font-size:110%">Send us a message!</p>
+				<table>
+					<tr>
+						<td>Name:</td>
+						<td><input maxlength="48" name="name" required="" type="text"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input maxlength="48" name="email" required="" type="email"></td>
+					</tr>
+					<tr>
+						<td>Phone:</td>
+						<td><input maxlength="48" name="phone" type="text"></td>
+					</tr>
+					<tr>
+						<td>Notes:</td>
+						<td>
+						<textarea name="notes" required="" rows="6"></textarea><br></td>
+					</tr>
+				</table>
+				<p><input style="font-size:110%" type="submit" value='Send'></p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
