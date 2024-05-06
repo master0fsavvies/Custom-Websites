@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Raleway&display=swap" rel="stylesheet">
+
+  <style>
+    img { max-width:100%; height:auto; }
+    button {
+      width: 100px;
+      margin-bottom: 12px;
+    }
+
+    body {
+      background-color: #dddddd;
+    }
+
+    #main-div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3%;
+      width: 90%;
+      margin: 2% auto;
+      padding: 33px;
+      background-color: white;
+      border-radius: 23px;
+      border: 1px #333333 solid;
+    }
+  </style>
+
+<body>
+  <h2 style="text-align:center; margin-top:20px;">JQuery Demo</h2>
+  <div id="main-div">
+    <section>
+      <div>
+        <button id="show">show</button>
+        <button id="hide">hide</button>
+        <button id="toggle">hideToggle</button>
+        <button style="margin-left:50px;" id="addBorder">add border</button>
+      </div>
+
+      <div>
+        <button id="fadein">fadeIn</button>
+        <button id="fadeout">fadeOut</button>
+        <button id="fadetoggle">fadeToggle</button>
+        <button style="margin-left: 50px;" id="removeBorder">remove border</button>
+      </div>
+    </section>
+    <section>
+      <div>
+        <button id="fontRaleway">Raleway Font</button>
+        <button id="fontCourgette">Courgette Font</button>
+        <button id="fontDefault">Default Font</button>
+        <button id="fontSpaceUp">increase spacing</button>
+        <button id="fontSpaceDown">regular spacing</button>
+      </div>
+    </section>
+    <section>
+      <img src="vaquera-chico.jpg">
+    </section>
+    <section>
+      <h3>Chico</h3>
+      <p>This is a photo of Vaquera with her boyfriend, Chico, when they were both less than a year old,
+      before they had a big family of 11 puppies. Chico is an Australian Cattle Dog. Vaquera is a Blue Heeler. 
+      Both breeds were developed in the 1800s on a cattle ranch in Australia. They combine Australian and 
+      English herding dog breeds along with Dingo.</p> 
+      <p>While Austrialian Cattle Dogs always have a tail - and speckled coats related to their Dalmatian heritage
+      - Blue heelers often are tail-less, a trait inherited from their Scottish Collie heritage. 
+      They also have the habit of nipping at the heels of cattle and sheep, which gave them their "heeler" nickname.</p>
+    </section>
+    <script type = "text/javascript">
+        var $img = $("img");
+        $("#addBorder").click(function() {$img.css("border", "12px solid #4b503c")});
+        $("#removeBorder").click(function() { $img.css("border", "")});
+        $("#show").click(function() {$img.show("slow")});
+        $("#hide").click(function() {$img.hide("slow")});
+        $("#toggle").click(function() {$img.toggle("slow")});
+        $("#fadein").click(function() {$img.fadeIn("slow")});
+        $("#fadeout").click(function() {$img.fadeOut("slow")});
+        $("#fadetoggle").click(function() {$img.fadeToggle("slow")});
+        var $maintext = $("p");
+        $("#fontRaleway").click(function() {$maintext.css("font-family", "Raleway")});
+        $("#fontCourgette").click(function() {$maintext.css("font-family", "Courgette")});
+        $("#fontDefault").click(function() {$maintext.css("font-family", "")});
+        $("#fontSpaceUp").click(function() {$maintext.css("letter-spacing", "2px")});
+        $("#fontSpaceDown").click(function() {$maintext.css("letter-spacing", "initial")});
+    </script>
+
+  </div>
+</body>
+</head>
+
+</html>
